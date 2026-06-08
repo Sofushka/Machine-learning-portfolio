@@ -1,7 +1,9 @@
 # Credit Risk & Default Prediction Pipeline
 
-An end-to-end, production-ready machine learning pipeline built to predict borrower default risk. This project tackles the core challenges inherent in credit scoring datasets: extreme class imbalance, missing financial disclosures, and the critical requirement for model transparency (Explainable AI) in financial decision-making.
+🔗 [Click Here to View the Live Interactive Report](https://sofushka.github.io/Machine-learning-portfolio/credit-risk-pipeline/Credit_Risk_And_Default_Prediction_Project.html)
 
+An end-to-end, production-ready machine learning pipeline built to predict borrower default risk. This project tackles the core challenges inherent in credit scoring datasets: extreme class imbalance, missing financial disclosures, and the critical requirement for model transparency (Explainable AI) in financial decision-making.
+ 
 ---
 
 ## 🛠️ Tech Stack & Advanced Concepts
