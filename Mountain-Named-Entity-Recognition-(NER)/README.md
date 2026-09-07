@@ -29,6 +29,18 @@ Token classification for entity extraction requires understanding fine-grained c
 
 ---
 
+## Evaluation Metrics
+
+Evaluated on the held-out test dataset (`test.json`):
+
+| Metric | Score |
+| :--- | :--- |
+| **Precision** | **0.8930** |
+| **Recall** | **0.9065** |
+| **$F_1$ Score** | **0.8997** |
+
+---
+
 ## Repository Structure
 
 ```text
