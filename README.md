@@ -54,8 +54,8 @@ An end-to-end GPU-accelerated Deep Learning pipeline built to concurrently predi
 
 An automated token classification pipeline fine-tuned to extract mountain geographical entities (`B-MOUNTAIN`, `I-MOUNTAIN`) from unstructured English text.
 
-* **Architecture:** Fine-tuned `dslim/bert-base-NER` using BIO (Beginning, Inside, Outside) tagging scheme.
-* **Optimization & Training:** Trained with AdamW ($\text{learning\_rate} = 2\text{e-}5$, linear warmup ratio $0.1$) and evaluated using per-epoch macro F1-score with Early Stopping. Best weights automatically published to Hugging Face Hub.
+* **Architecture:** Fine-tuned `dslim/bert-base-NER` using BIO tagging scheme.
+* **Optimization & Training:** Trained with AdamW (`learning_rate = 2e-5`, linear warmup ratio `0.1`) and evaluated using per-epoch macro F1-score with Early Stopping. Best weights automatically published to Hugging Face Hub.
 * **Test Evaluation Results:**
 
 | Metric | Score |
