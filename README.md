@@ -79,7 +79,6 @@ An end-to-end Deep Learning and Spatial AI pipeline for detecting keypoint corre
 ---
 
 ### 4. Credit Risk & Default Prediction Pipeline
-🔗 [View Live Interactive Report](#)
 
 An end-to-end financial machine learning pipeline designed to forecast borrower default risk while resolving severe class imbalance and maintaining full model interpretability for credit underwriting.
 
