@@ -1,6 +1,6 @@
 # Data Science & Machine Learning Portfolio
 
-Welcome! This repository serves as a showcase of my end-to-end data science projects, focusing on advanced tabular data pipelines, machine learning ensembles, and deep learning architectures across NLP and Computer Vision. 
+Welcome! This repository serves as a showcase of my end-to-end data science projects, focusing on advanced tabular data pipelines, machine learning ensembles, Bayesian marketing analytics, and deep learning architectures across NLP and Computer Vision.
 
 Each project contains a complete production-grade pipeline: from exploratory data analysis (EDA) and robust handling of real-world data anomalies to explainable AI (XAI), transformer fine-tuning, and interactive deployment.
 
@@ -12,6 +12,7 @@ Each project contains a complete production-grade pipeline: from exploratory dat
 * **Deep Learning & NLP:** PyTorch, TensorFlow, Keras, Hugging Face Transformers, KerasTuner, Weights & Biases (WandB), spaCy
 * **Computer Vision & Spatial AI:** Kornia, OpenCV, LoFTR, Geometric Verification (USAC_MAGSAC/RANSAC)
 * **Tabular ML Frameworks:** Scikit-Learn, XGBoost, LightGBM, CatBoost, Optuna
+* **Bayesian & Marketing Analytics:** PyMC, PyMC-Marketing, ArviZ
 * **Explainable AI & Analysis:** SHAP, Pandas, NumPy, VIF Analysis
 * **Visualization & Dashboards:** Plotly (2D/3D), Streamlit, Matplotlib, Seaborn
 
@@ -26,6 +27,7 @@ Each project contains a complete production-grade pipeline: from exploratory dat
 | **[Satellite Image Keypoint Matching](#3-satellite-image-keypoint-matching)** | Computer Vision / Remote Sensing | LoFTR, Kornia, USAC_MAGSAC | Robust seasonal alignment |
 | **[Credit Risk & Default Prediction](#4-credit-risk--default-prediction-pipeline)** | Financial ML / Imbalanced Tabular | LightGBM, CatBoost, XGBoost, Optuna, SHAP | **0.847 ROC-AUC** (PR-Optimized) |
 | **[USA Crime Rate Regression](#5-usa-crime-rate-regression-pipeline)** | Tabular Regression / Analytics | XGBoost, Scikit-Learn, VIF Analysis | **$R^2 = 0.64$, $\text{MAE} = 213$** |
+| **[Marketing Mix Modelling](#6-marketing-mix-modelling-mmm--budget-reallocation)** | Bayesian Time Series / Marketing Analytics | PyMC-Marketing, ArviZ, Pandas | **6.2% MAPE** (vs 9.1–13.7% baselines) |
 
 ---
 
@@ -109,3 +111,24 @@ A socio-economic regression pipeline analyzing 2,000 regional records across the
 * **Business Impact:** Output pipeline maps residual errors to highlight anomalous regions where crime rates deviate significantly from baseline socio-economic indicators.
 * **Tech Stack:** XGBoost, Scikit-Learn, Pandas, NumPy, Matplotlib, Seaborn.
 
+---
+
+### 6. Marketing Mix Modelling (MMM) & Budget Reallocation
+A Bayesian Marketing Mix Model built with **PyMC-Marketing** on ~2 years of daily data (Oct 2024 – Sep 2026) to measure how paid media channels drive new-customer acquisition, and to turn those estimates into a concrete budget recommendation for a client.
+
+* **Bayesian Model:** Modelled 4 media channels with adstock (carry-over) and saturation (diminishing returns) effects, plus trend and seasonality controls, with uncertainty quantified through posterior distributions.
+* **Hold-Out Validation:** Evaluated on a time-based hold-out against three simple baselines. The MMM reached **6.2% MAPE** vs. 9.1–13.7% for the baselines (28-day mean, same-weekday mean, regression without media).
+* **Robustness Checks:** Refit the model under changed settings (adstock length, seasonality order, alternative saturation function) to check which conclusions stay stable, and reported only those that do.
+* **Response Curves & CPA:** Estimated response curves and cost per acquisition per channel with uncertainty intervals, using a **£40 marginal-cost** limit as the budget cut-off.
+* **Business Impact:** Budget reallocation across the stable channels is projected to deliver about **+145 new customers per 30 days** at the same spend. One channel was left unchanged because its estimate was not stable.
+* **Client Deliverable:** Results packaged as a Jupyter notebook and a client-facing presentation (PDF).
+* **Tech Stack:** PyMC-Marketing, PyMC, ArviZ, Pandas, NumPy, Matplotlib.
+
+* **Hold-Out Validation:** Evaluated on a time-based hold-out against three simple baselines:
+
+| Model | MAPE (Hold-Out) |
+| :--- | :--- |
+| **Bayesian MMM (PyMC-Marketing)** | **6.2%** |
+| No-media regression | 13.7% |
+| Same-weekday mean | 9.1% |
+| 28-day average | 9.5% |
