@@ -3,7 +3,6 @@
 This repository contains an end-to-end Deep Learning pipeline for detecting keypoint correspondences between satellite images (Sentinel-2) taken at different dates/seasons.
 
 * **Original Dataset:** [Kaggle - Deforestation in Ukraine](https://www.kaggle.com/datasets/isaienkov/deforestation-in-ukraine)
-* **Processed Tiles Dataset:** [Google Drive - Processed Pairs 512x512](https://drive.google.com/file/d/176wtJIsB1RIv2Axe-f2nplRXoebqGTGy/view?usp=sharing)
 * **Pretrained Weights:** Integrated via Kornia LoFTR Outdoor Weights (`kornia.feature.LoFTR`)
 
 ---
